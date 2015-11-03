@@ -1,0 +1,25 @@
+<!-- HEADER -->
+<div data-smart-include="app/layout/partials/header.tpl.html" class="placeholder-header">
+</div>
+<!-- END HEADER -->
+
+<!-- Left panel -->
+<div data-smart-include="app/layout/partials/navigation.tpl.html" class="placeholder-left-panel"></div>
+
+<!-- MAIN PANEL -->
+<div id="main" role="main">
+
+  <!-- <demo-states></demo-states> -->
+
+  <!-- RIBBON -->
+  <div id="ribbon">
+    <!-- breadcrumbs -->
+    <state-breadcrumbs></state-breadcrumbs>
+  </div>
+  <!-- End RIBBON -->
+
+  <div data-wrap-for="#content">
+    <div data-ui-view="content" data-autoscroll="false"></div>
+  </div>
+
+</div>
