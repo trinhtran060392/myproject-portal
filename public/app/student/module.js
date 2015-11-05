@@ -20,7 +20,8 @@ define([
               deps: $couchPotatoProvider.resolveDependencies([
                 'student/controllers/student-controller',
                 'services/student-service',
-                'student/directives/enterEvent'
+                'student/directives/enterEvent',
+                'student/directives/student-list'
                 
               ])
             }
@@ -28,6 +29,46 @@ define([
         },
         data: {
           title: 'Student Management',
+          requireLogin: true
+        }
+      }).state('app.boys', {
+        url: '/boys',
+        views: {
+          "content@app": {
+            controller: 'BoysCtrl',
+            templateUrl: 'app/student/views/boys-list.tpl.html',
+            resolve: {
+              deps: $couchPotatoProvider.resolveDependencies([
+                'student/controllers/boys-controller',
+                'services/student-service',
+                'student/directives/student-list'
+                
+              ])
+            }
+          }
+        },
+        data: {
+          title: 'Boys Management',
+          requireLogin: true
+        }
+      }).state('app.girls', {
+        url: '/girls',
+        views: {
+          "content@app": {
+            controller: 'GirlsCtrl',
+            templateUrl: 'app/student/views/girls-list.tpl.html',
+            resolve: {
+              deps: $couchPotatoProvider.resolveDependencies([
+                'student/controllers/girls-controller',
+                'services/student-service',
+                'student/directives/student-list'
+                
+              ])
+            }
+          }
+        },
+        data: {
+          title: 'Girls Management',
           requireLogin: true
         }
       })

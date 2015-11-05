@@ -29,6 +29,30 @@ define(['student/module'], function (module) {
         }).error(function(data, status) {
           callback(data, status);
         });
+      },
+      boys: function (callback) {
+        var request = {
+          method: 'GET',
+          url: appConfig.RestEntry + '/api/boys'
+        };
+
+        $http(request).success(function(data, status) {
+          callback(data, status);
+        }).error(function(data, status) {
+          callback(data, status);
+        });
+      },
+      girls: function (callback) {
+        var request = {
+          method: 'GET',
+          url: appConfig.RestEntry + '/api/girls'
+        };
+
+        $http(request).success(function(data, status) {
+          callback(data, status);
+        }).error(function(data, status) {
+          callback(data, status);
+        });
       }
     }
   }]);

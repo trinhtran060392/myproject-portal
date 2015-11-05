@@ -5,6 +5,7 @@ define(['student/module'], function (module){
 	
 	StudentService.list(function(data, status) {
 		$scope.students = data;
+
 	});
 
 }])
