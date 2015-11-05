@@ -1,1 +1,16 @@
-<div id="content">test</div>
+<div id="content">
+
+<div class="row">
+	<div class="col-md-4">
+		<span>Name:</span>
+		<input class="form-control" type="text" enter-event ng-model="name"></input>	
+	</div>
+</div>
+
+<div class="row">
+	<ul class="list-group col-md-4">
+		<li class="list-group-item" ng-repeat="s in students">
+			{{s.name}}
+		</li>
+	</ul>
+</div>

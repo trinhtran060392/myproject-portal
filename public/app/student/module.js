@@ -18,7 +18,10 @@ define([
             templateUrl: 'app/student/views/student-list.tpl.html',
             resolve: {
               deps: $couchPotatoProvider.resolveDependencies([
-                'student/controllers/student-controller'
+                'student/controllers/student-controller',
+                'services/student-service',
+                'student/directives/enterEvent'
+                
               ])
             }
           }
